@@ -59,58 +59,15 @@ nav a:hover {
   border-radius: 2px;
   transition: all 0.3s;
 }
-.hamburger.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-.nav-drawer {
+#menu-toggle {
   display: none;
-  flex-direction: column;
-  gap: 0;
-  position: absolute;
-  top: 70px;
-  right: 0;
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 10px;
-  overflow: hidden;
-  z-index: 100;
-  min-width: 160px;
 }
-.nav-drawer.open {
-  display: flex;
-}
-.nav-drawer a {
-  text-decoration: none;
-  color: white;
-  padding: 14px 24px;
-  border-bottom: 1px solid #2a2a2a;
-  transition:
-}
-
-.nav-drawer a:last-child {
-  border-bottom: none;
-}
-.nav-drawer a:hover {
-  background: #2a2a2a;
-  color: #eeea0f;
-}
-
 #home {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 60px 0 40px;
   gap: 40px;
-}
-.hero {
-  flex: 1;
 }
 .P1 {
   font-size: 22px;
@@ -135,11 +92,6 @@ nav a:hover {
   line-height: 1.7;
   margin-bottom: 28px;
 }
-.buttons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
 button {
   border-radius: 7px;
   padding: 10px 24px;
@@ -162,9 +114,6 @@ button:hover {
   border-radius: 50%;
   border: 3px solid #6a11cb;
   flex-shrink: 0;
-}
-#whatido {
-  padding: 60px 0 20px;
 }
 #whatido h2 {
   text-align: center;
@@ -198,13 +147,11 @@ button:hover {
   line-height: 1.6;
 }
 footer {
-  margin-top: 80px;
+  margin-top: 100px;
   border-top: 1px solid #1e1e1e;
   background: #0a0a0a;
 }
 .footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
   padding: 60px 20px 30px;
 }
 .footer-top {
@@ -223,8 +170,6 @@ footer {
   max-width: 260px;
 }
 .footer-socials {
-  display: flex;
-  gap: 12px;
   margin-top: 20px;
 }
 .footer-socials a {
@@ -242,12 +187,11 @@ footer {
 .footer-socials a:hover {
   border-color: #eeea0f;
   color: #eeea0f;
-  background: rgba(238, 234, 15, 0.06);
 }
 .footer-col h4 {
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.20em;
   text-transform: uppercase;
   color: #eeea0f;
   margin-bottom: 18px;
@@ -269,20 +213,13 @@ footer {
   color: white;
 }
 .footer-bottom {
-  border-top: 1px solid #1e1e1e;
+  border-top: 5px solid #1e1e1e;
   padding-top: 24px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
 }
 .footer-bottom p {
-  font-size: 13px;
-  color: #555;
-}
-.footer-bottom span {
-  font-size: 13px;
+  font-size: 15px;
   color: #555;
 }
 .footer-bottom .heart {
@@ -295,6 +232,21 @@ footer {
   }
   nav {
     display: none;
+  }
+   nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    gap: 15px;
+    z-index: 100;
+  }
+  #menu-toggle:checked + .hamburger + nav {
+    display: flex;
   }
   .hamburger {
     display: flex;
